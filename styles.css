@@ -2018,6 +2018,37 @@ html:not(.js) .tabs {
   gap: 14px;
 }
 
+/* Afianzadoras con las que trabajamos */
+.allies {
+  margin-top: 14px;
+  padding: clamp(1.5rem, 4vw, 2.4rem);
+  border: 1px solid rgba(226, 189, 75, 0.18);
+  border-radius: 24px;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.015));
+}
+
+.allies h3 {
+  font-size: clamp(1.25rem, 3.6vw, 1.8rem);
+}
+
+.allies__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 1.3rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.allies__list li {
+  padding: 0.65rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(226, 189, 75, 0.06);
+  font-size: 0.95rem;
+  color: var(--gold-100);
+}
+
 .cell {
   position: relative;
   display: grid;
