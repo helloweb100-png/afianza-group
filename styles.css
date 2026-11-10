@@ -690,10 +690,12 @@ html.menu-open .burger span:nth-child(3) {
   font-size: 1rem;
 }
 
+/* Botones principales en azul marino (el nombre de la clase se conserva) */
 .btn--gold {
-  color: #150f03;
-  background: linear-gradient(135deg, #fbeeb4 0%, #e9c85a 38%, #c99a2b 72%, #a97b17 100%);
-  box-shadow: 0 12px 32px -12px rgba(226, 189, 75, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  color: #fff;
+  background: #152843;
+  border-color: rgba(140, 172, 224, 0.38);
+  box-shadow: 0 12px 32px -12px rgba(21, 40, 67, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 
 .btn--gold::before {
@@ -702,41 +704,42 @@ html.menu-open .burger span:nth-child(3) {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background: linear-gradient(100deg, transparent 30%, rgba(255, 255, 255, 0.65) 50%, transparent 70%);
+  background: linear-gradient(100deg, transparent 30%, rgba(255, 255, 255, 0.2) 50%, transparent 70%);
   transform: translateX(-130%);
   animation: shine 4.8s ease-in-out infinite;
 }
 
 .btn--gold:hover {
+  background: #1f3a63;
   transform: translateY(-2px);
-  box-shadow: 0 18px 40px -12px rgba(241, 215, 122, 0.85), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  box-shadow: 0 18px 40px -12px rgba(31, 58, 99, 0.95), inset 0 1px 0 rgba(255, 255, 255, 0.18);
 }
 
 .btn--ghost {
   color: var(--text);
   background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(226, 189, 75, 0.4);
+  border-color: rgba(140, 172, 224, 0.45);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 
 .btn--ghost:hover {
-  background: rgba(226, 189, 75, 0.16);
-  border-color: var(--gold-300);
+  background: #152843;
+  border-color: rgba(140, 172, 224, 0.7);
   transform: translateY(-2px);
 }
 
 .btn--dark {
-  color: #f6e7a5;
-  background: #14110a;
-  border-color: #14110a;
-  box-shadow: 0 14px 30px -14px rgba(20, 17, 10, 0.7);
+  color: #fff;
+  background: #152843;
+  border-color: #152843;
+  box-shadow: 0 14px 30px -14px rgba(21, 40, 67, 0.7);
 }
 
 .btn--dark:hover {
-  color: #150f03;
-  background: linear-gradient(135deg, #fbeeb4, #e2bd4b);
-  border-color: var(--gold-500);
+  color: #fff;
+  background: #1f3a63;
+  border-color: #1f3a63;
   transform: translateY(-2px);
 }
 
@@ -2698,9 +2701,10 @@ html:not(.js) .tabs {
 }
 
 .cta-float {
-  color: #150f03;
-  background: linear-gradient(135deg, #fbeeb4, #e2bd4b 50%, #a97b17);
-  box-shadow: 0 14px 34px -10px rgba(226, 189, 75, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  color: #fff;
+  background: #152843;
+  border: 1px solid rgba(140, 172, 224, 0.38);
+  box-shadow: 0 14px 34px -10px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.12);
   opacity: 0;
   visibility: hidden;
   transform: translateY(24px);
