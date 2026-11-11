@@ -11,7 +11,7 @@
   /* ---------- CONFIGURACIÓN ---------- */
   // Número de WhatsApp del negocio: código de país + 10 dígitos, solo números.
   // Mientras esté vacío, el botón flotante y el envío por WhatsApp quedan ocultos.
-  const WHATSAPP_NUMBER = '';
+  const WHATSAPP_NUMBER = '5212211657297';
   const NOMBRE_NEGOCIO = 'Afianzagroup';
   const ZONA_HORARIA = 'America/Mexico_City';
   // Horario de atención en minutos desde las 00:00 (1 = lunes ... 5 = viernes)
@@ -951,6 +951,20 @@
     wa.href = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(text);
     wa.hidden = false;
     root.classList.add('wa-on');
+
+    // Todos los botones de cotizar abren WhatsApp con un mensaje listo (según el servicio o perfil del botón)
+    const base = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=';
+    $$('a.btn[href="#contacto"]').forEach((a) => {
+      let mensaje = text;
+      if (a.dataset.servicio) {
+        mensaje = 'Hola, vi la página de ' + NOMBRE_NEGOCIO + ' y quiero cotizar: ' + a.dataset.servicio + '.';
+      } else if (a.dataset.perfil) {
+        mensaje = 'Hola, vi la página de ' + NOMBRE_NEGOCIO + '. Mi perfil: ' + a.dataset.perfil + '. Quiero cotizar una fianza o un seguro.';
+      }
+      a.href = base + encodeURIComponent(mensaje);
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+    });
   }
 
   /* ---------- ARRANQUE ---------- */
